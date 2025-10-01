@@ -7,7 +7,21 @@ function QuickGuide() {
   return (
     <div className="quick-guide">
       <div className="quick-guide__media" aria-hidden>
-        <div className="video-placeholder">🎬 Hướng dẫn tra cứu</div>
+        <div className="video-container">
+          <video
+            className="guide-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="https://videos.pexels.com/video-files/8088013/8088013-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          </video>
+          <div className="video-overlay">
+            <span className="video-icon">▶</span>
+            <span className="video-label">Hướng dẫn tra cứu</span>
+          </div>
+        </div>
       </div>
       <div className="quick-guide__content">
         <h2>Hướng dẫn nhanh</h2>
