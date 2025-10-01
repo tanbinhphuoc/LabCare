@@ -6,17 +6,20 @@ const notices = [
 
 function Announcements() {
   return (
-    <div className="announcements">
-      {notices.map(n => (
-        <div className={`notice notice--${n.type}`} key={n.title}>
-          <div className="notice__badge" aria-hidden>📢</div>
-          <div className="notice__body">
-            <h4 className="notice__title">{n.title}</h4>
-            <p className="notice__desc">{n.desc}</p>
+    <>
+      <h2>Thông báo mới nhất</h2>
+      <div className="announcements">
+        {notices.map(n => (
+          <div className={`notice notice--${n.type}`} key={n.title}>
+            <div className="notice__badge" aria-hidden>📢</div>
+            <div className="notice__body">
+              <h4 className="notice__title">{n.title}</h4>
+              <p className="notice__desc">{n.desc}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   )
 }
 

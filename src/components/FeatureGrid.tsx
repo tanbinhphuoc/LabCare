@@ -7,17 +7,20 @@ const items = [
 
 function FeatureGrid() {
   return (
-    <div className="features">
-      {items.map((it) => (
-        <div className="feature" key={it.title}>
-          <div className="feature__icon" aria-hidden>{it.icon}</div>
-          <div className="feature__content">
-            <h3 className="feature__title">{it.title}</h3>
-            <p className="feature__desc">{it.desc}</p>
+    <>
+      <h2>Tính năng nổi bật</h2>
+      <div className="features">
+        {items.map((it) => (
+          <div className="feature" key={it.title}>
+            <div className="feature__icon" aria-hidden>{it.icon}</div>
+            <div className="feature__content">
+              <h3 className="feature__title">{it.title}</h3>
+              <p className="feature__desc">{it.desc}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   )
 }
 
