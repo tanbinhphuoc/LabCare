@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+npm-debug.log*
+yarn-*.log*
+pnpm-debug.log*
+.DS_Store
+coverage/
+.vite/
+.parcel-cache/
+.turbo/
+.cache/
+*.local
+*.swp
+Thumbs.db
