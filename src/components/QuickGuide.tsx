@@ -1,21 +1,24 @@
 const faqs = [
-  { q: 'Làm sao để xem kết quả?', a: 'Chọn Tra cứu, nhập mã xét nghiệm và ngày sinh để xác thực.' },
-  { q: 'Tôi quên mã xét nghiệm thì sao?', a: 'Liên hệ hỗ trợ để được cấp lại mã hoặc xác thực thông tin.' },
-]
+  {
+    q: 'Làm sao để xem kết quả?',
+    a: 'Chọn Tra cứu, nhập mã xét nghiệm và ngày sinh để xác thực.',
+  },
+  {
+    q: 'Tôi quên mã xét nghiệm thì sao?',
+    a: 'Liên hệ hỗ trợ để được cấp lại mã hoặc xác thực thông tin.',
+  },
+];
 
 function QuickGuide() {
   return (
     <div className="quick-guide">
       <div className="quick-guide__media" aria-hidden>
         <div className="video-container">
-          <video
-            className="guide-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="https://videos.pexels.com/video-files/8088013/8088013-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <video className="guide-video" autoPlay loop muted playsInline>
+            <source
+              src="https://videos.pexels.com/video-files/8088013/8088013-uhd_2560_1440_25fps.mp4"
+              type="video/mp4"
+            />
           </video>
           <div className="video-overlay">
             <span className="video-icon">▶</span>
@@ -31,7 +34,7 @@ function QuickGuide() {
           <li>Xem và tải kết quả</li>
         </ol>
         <div className="faq">
-          {faqs.map(item => (
+          {faqs.map((item) => (
             <details key={item.q} className="faq__item">
               <summary>{item.q}</summary>
               <p>{item.a}</p>
@@ -40,10 +43,7 @@ function QuickGuide() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default QuickGuide
-
-
-
+export default QuickGuide;

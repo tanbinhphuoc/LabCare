@@ -3,8 +3,12 @@ function Newsletter() {
     <section className="newsletter">
       <div className="container newsletter__inner">
         <div className="newsletter__content">
-          <h2 className="newsletter__title">Nhận tin tức mới nhất và nhiều hơn nữa!</h2>
-          <p className="newsletter__subtitle">Đăng ký nhận bản tin của chúng tôi</p>
+          <h2 className="newsletter__title">
+            Nhận tin tức mới nhất và nhiều hơn nữa!
+          </h2>
+          <p className="newsletter__subtitle">
+            Đăng ký nhận bản tin của chúng tôi
+          </p>
           <form className="newsletter__form">
             <input
               type="email"
@@ -25,7 +29,7 @@ function Newsletter() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Newsletter
+export default Newsletter;

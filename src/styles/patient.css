@@ -532,8 +532,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-container p,
@@ -552,33 +556,31 @@
   .login-container {
     padding: 30px 20px;
   }
-  
+
   .header-content {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
-  
+
   .results-summary {
     grid-template-columns: 1fr;
   }
-  
+
   .result-header {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .report-meta {
     grid-template-columns: 1fr;
   }
-  
+
   .results-table {
     overflow-x: auto;
   }
-  
+
   .results-table table {
     min-width: 600px;
   }
 }
-
-
