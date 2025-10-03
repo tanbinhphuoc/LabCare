@@ -4,6 +4,7 @@ import FeatureGrid from '../components/FeatureGrid'
 import QuickGuide from '../components/QuickGuide'
 import Announcements from '../components/Announcements'
 import ContactSection from '../components/ContactSection'
+import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import ChatbotButton from '../components/ChatbotButton'
 
@@ -33,6 +34,7 @@ function Home() {
             <ContactSection />
           </div>
         </section>
+        <Newsletter />
       </main>
       <Footer />
       <ChatbotButton />
