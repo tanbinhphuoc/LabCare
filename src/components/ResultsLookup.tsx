@@ -51,6 +51,21 @@ function ResultsLookup() {
     setMedicalExams([]);
 
     try {
+      // Check if Supabase is properly configured
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      if (
+        !supabaseUrl ||
+        !supabaseAnonKey ||
+        supabaseUrl.includes('placeholder')
+      ) {
+        setError(
+          'Hệ thống tra cứu chưa được cấu hình. Vui lòng sử dụng tính năng đăng nhập bệnh nhân để xem kết quả.',
+        );
+        return;
+      }
+
       const { data: patientData, error: patientError } = await supabase
         .from('patients')
         .select('*')
