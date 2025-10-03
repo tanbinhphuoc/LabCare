@@ -29,17 +29,6 @@ function TestResultDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  useEffect(() => {
-    // Check if patient is logged in
-    const patientId = localStorage.getItem('patientId');
-    if (!patientId) {
-      navigate('/patient/login');
-      return;
-    }
-
-    loadTestResult();
-  }, [id, navigate, loadTestResult]);
-
   const loadTestResult = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -118,6 +107,17 @@ function TestResultDetail() {
       setIsLoading(false);
     }
   }, [id]);
+
+  useEffect(() => {
+    // Check if patient is logged in
+    const patientId = localStorage.getItem('patientId');
+    if (!patientId) {
+      navigate('/patient/login');
+      return;
+    }
+
+    loadTestResult();
+  }, [id, navigate, loadTestResult]);
 
   const handleDownloadPdf = async () => {
     setIsDownloading(true);

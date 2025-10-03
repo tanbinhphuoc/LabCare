@@ -28,7 +28,7 @@ if (isSupabaseConfigured()) {
         order: () => Promise.resolve({ data: [], error: null }),
       }),
     }),
-  } as ReturnType<typeof createClient>;
+  } as unknown as ReturnType<typeof createClient>;
 
   if (import.meta.env.DEV) {
     console.warn(

@@ -80,34 +80,36 @@ function ResultsLookup() {
         return;
       }
 
-      setPatient(patientData);
+      setPatient(patientData as Patient);
 
-      const { data: resultsData, error: resultsError } = await supabase
-        .from('test_results')
-        .select(
-          `
-          *,
-          lab_tests (
-            test_name,
-            category,
-            description
+      if ((patientData as Patient).id) {
+        const { data: resultsData, error: resultsError } = await supabase
+          .from('test_results')
+          .select(
+            `
+            *,
+            lab_tests (
+              test_name,
+              category,
+              description
+            )
+          `,
           )
-        `,
-        )
-        .eq('patient_id', patientData.id)
-        .order('test_date', { ascending: false });
+          .eq('patient_id', (patientData as Patient).id)
+          .order('test_date', { ascending: false });
 
-      if (resultsError) throw resultsError;
-      setTestResults(resultsData || []);
+        if (resultsError) throw resultsError;
+        setTestResults(resultsData || []);
 
-      const { data: examsData, error: examsError } = await supabase
-        .from('medical_exams')
-        .select('*')
-        .eq('patient_id', patientData.id)
-        .order('exam_date', { ascending: false });
+        const { data: examsData, error: examsError } = await supabase
+          .from('medical_exams')
+          .select('*')
+          .eq('patient_id', (patientData as Patient).id)
+          .order('exam_date', { ascending: false });
 
-      if (examsError) throw examsError;
-      setMedicalExams(examsData || []);
+        if (examsError) throw examsError;
+        setMedicalExams(examsData || []);
+      }
     } catch (err) {
       console.error('Error fetching data:', err);
       setError('Đã xảy ra lỗi khi tra cứu thông tin. Vui lòng thử lại.');
