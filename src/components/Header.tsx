@@ -4,10 +4,12 @@ function Header() {
       <div className="header__top">
         <div className="container header__top-inner">
           <div className="header__info">
-            <span className="header__info-item">Hỗ trợ: 24/7 Cuộc gọi khẩn cấp</span>
+            <span className="header__info-item">
+              Hỗ trợ: 24/7 Cuộc gọi khẩn cấp
+            </span>
           </div>
           <div className="header__info">
-            <span className="header__info-item">Email: HealthCa@gmail.com</span>
+            <span className="header__info-item">Email: lab@pharma.com</span>
           </div>
         </div>
       </div>
@@ -15,26 +17,31 @@ function Header() {
         <div className="brand">
           <div className="brand__logo" aria-hidden>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm2 13h-2v-3H7v-2h3V9h2v3h3v2h-3v3z"/>
+              <path d="M19.5 3.09L15 5.59l-3-1-3.18 1.7A2.5 2.5 0 007 6.5a2.5 2.5 0 00-2.5 2.5v11a2.5 2.5 0 002.5 2.5 2.5 2.5 0 002.5-2.5c0-.58-.2-1.11-.53-1.54L12 17l3 1 4.5-2.4a2.5 2.5 0 001.5-2.3V6.5a2.5 2.5 0 00-1.5-2.41zM7 20a1 1 0 110-2 1 1 0 010 2zm1-5v-3H6v3H5v-3H4v-2h1v-1h1v1h2v-1h1v1h1v2h-1v3H8zm9.5-3.7l-3 1.6-3-1-3.18 1.7c.11.29.18.6.18.9V9h1v3h2V9h1v3h2V9h1v3h1v1.3z" />
             </svg>
           </div>
-          <div className="brand__name">Healthca</div>
+          <div className="brand__name">Pharma Lab</div>
         </div>
         <nav className="nav" aria-label="Chính">
-          <a href="#top" className="nav__link">Trang chủ</a>
-          <a href="#about" className="nav__link">Về chúng tôi</a>
-          <a href="#services" className="nav__link">Dịch vụ +</a>
-          <a href="#pages" className="nav__link nav__link--highlight">Trang +</a>
-          <a href="#blog" className="nav__link">Blog +</a>
-          <a href="#contact" className="nav__link">Liên hệ</a>
-          <a href="#signup" className="nav__cta">Bắt đầu</a>
+          <a href="#top" className="nav__link">
+            Trang chủ
+          </a>
+          <a href="#results" className="nav__link">
+            Tra cứu kết quả
+          </a>
+          <a href="#pricing" className="nav__link">
+            Bảng giá
+          </a>
+          <a href="#process" className="nav__link">
+            Quy trình
+          </a>
+          <a href="#contact" className="nav__link">
+            Liên hệ
+          </a>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
-
-
-
+export default Header;
