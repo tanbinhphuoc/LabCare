@@ -58,7 +58,8 @@ function ResultsLookup() {
       if (
         !supabaseUrl ||
         !supabaseAnonKey ||
-        supabaseUrl.includes('placeholder')
+        supabaseUrl.includes('placeholder') ||
+        supabaseAnonKey.includes('placeholder')
       ) {
         setError(
           'Hệ thống tra cứu chưa được cấu hình. Vui lòng sử dụng tính năng đăng nhập bệnh nhân để xem kết quả.',
