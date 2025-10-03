@@ -1,12 +1,10 @@
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import FeatureGrid from '../components/FeatureGrid'
-import QuickGuide from '../components/QuickGuide'
-import Announcements from '../components/Announcements'
-import ContactSection from '../components/ContactSection'
-import Newsletter from '../components/Newsletter'
+import ResultsLookup from '../components/ResultsLookup'
+import PricingSection from '../components/PricingSection'
+import ProcessSteps from '../components/ProcessSteps'
+import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
-import ChatbotButton from '../components/ChatbotButton'
 
 function Home() {
   return (
@@ -14,30 +12,20 @@ function Home() {
       <Header />
       <main>
         <Hero />
-        <section id="features" className="section section--alt">
-          <div className="container">
-            <FeatureGrid />
-          </div>
+        <section id="results" className="section">
+          <ResultsLookup />
         </section>
-        <section id="guide" className="section">
-          <div className="container">
-            <QuickGuide />
-          </div>
+        <section id="pricing" className="section section--dark">
+          <PricingSection />
         </section>
-        <section id="announcements" className="section section--alt">
-          <div className="container">
-            <Announcements />
-          </div>
+        <section id="process" className="section section--dark">
+          <ProcessSteps />
         </section>
         <section id="contact" className="section">
-          <div className="container">
-            <ContactSection />
-          </div>
+          <ContactForm />
         </section>
-        <Newsletter />
       </main>
       <Footer />
-      <ChatbotButton />
     </div>
   )
 }
